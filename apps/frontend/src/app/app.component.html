@@ -1,1 +1,5 @@
-<play-httpclient-fetch-nx-welcome></play-httpclient-fetch-nx-welcome>
+{{ hello$ | async | json }}
+<hr />
+<ul>
+  <li *ngFor="let chunk of messageChunks$ | async">{{ chunk }}</li>
+</ul>
